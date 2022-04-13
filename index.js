@@ -3,7 +3,7 @@ const express = require("express");
 const app = express()
 const port = 8080;
 
-const registerer = [];
+const people = [];
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -24,25 +24,25 @@ app.post("/registration", (request, response) => {
     const email = request.body.email;
     const password = request.body.password;
 
-    registerer.push({
+    people.push({
         namadepan, 
         namabelakang,
         email,
         password,
     });
 
-    console.log(registerer);
+    console.log(people);
 
     response.redirect("/view-usertable");
 });
 
 app.get("/view-user", (request, response) => {
-    response.json(registerer);
+    response.json(people);
 });
 
-app.get("view-usertable", (request, response) => {
-    response.render("registerer", {
-        registerer: registerer,
+app.get("/view-usertable", (request, response) => {
+    response.render("hasil-register", {
+        people,
     });
 });
 

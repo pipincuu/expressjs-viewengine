@@ -7,8 +7,6 @@
     <title>Table View Registration</title>
 </head>
 <body>
-    <a href="/registration">Tambah User</a>
-
     <table border="1">
         <thead>
             <tr>
@@ -19,16 +17,16 @@
             </tr>
         </thead>
 
-        <!-- <tbody>
-            <% registerer.forEach((registerer) => { %>
+        <tbody>
+            <% people.forEach((user) => { %>
             <tr>
-                <td><%= registerer.namadepan %></td>
-                <td><%= registerer.namabelakang %></td>
-                <td><%= registerer.email %></td>
-                <td><%= registerer.password %></td>
+                <td><%= user.namadepan %></td>
+                <td><%= user.namabelakang %></td>
+                <td><%= user.email %></td>
+                <td><%= user.password %></td>
             </tr>
             <% }) %>
-        </tbody> -->
+        </tbody>
     </table>
 </body>
 </html>
